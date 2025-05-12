@@ -5,9 +5,9 @@
 a company call 'abc ltd' is a service provider for tender information and they have clients from all over the india subscribe to thier services, on gem website we have tender informations
 our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner bidder information on abc ltd portal for xyz tenders but cannot download the documents for that particual tender and client send mutiple cases, so support team needs to deal with each tender's reference id.
  - each tender has unique reference id
- - if we have winner bidder gem website must upload the whole document as a pdf
+ - if we have winner bidder name on gem, document must be upload as a pdf
 
-1. customer Support employee must manually:
+1. **customer Support employee must manually:**
    - Visit https://gem.gov.in/
    - Search for each tender using its unique reference ID
    - Solve captchas repeatedly for each tender
@@ -15,20 +15,20 @@ our Customer support teams handling Government e-Marketplace (GEM) portal querie
    - Verify successful downloads
    - Send documents to clients
 
-2. This becomes time-consuming when handling clinet's on call:
+2. **This becomes time-consuming when handling clinet's on call:**
    - 2-3 reference IDs (typical case)
    - 30-40 reference IDs (large cases)
    - Multiple clients simultaneously
 
-3. Additional complications:
+3. **Additional complications:**
    - Not all customer support employee have direct database access
    - Senior agents get overloaded with more work
    - Clients remain on hold during manual verification
 
 
 
-to solves these issues by enabling one-click downloading of all tender documents using reference IDs.
-let me explain my code will give you chance to just paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes
+**to solves these issues by enabling one-click downloading of all tender documents using reference IDs.
+let me explain my code will give you chance to just paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes**
 
 ## How the Solution Works
 
