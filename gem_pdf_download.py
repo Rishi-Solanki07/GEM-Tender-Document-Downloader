@@ -239,10 +239,3 @@ rdf.head(10)
 
 #Save rdf DataFrame to CSV/excel format if you want
 rdf.to_csv(r"choose_yourpath\gempdf\info.csv", index=False)
-
-
-# In[ ]:
-
-
-
-
