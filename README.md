@@ -29,8 +29,8 @@ our Customer support teams handling Government e-Marketplace (GEM) portal querie
 
 
 
-**to solves these issues by enabling one-click downloading of all tender documents using reference IDs.
-let me explain my code will give you chance to just paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes**
+#to solves these issues  we can just  enable one-click downloading of all tender documents using reference IDs, and you will get your documnets downloaded on your choosen path.
+#yes! paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes, let me explain my code.
 
 ## How the Solution Works
 
