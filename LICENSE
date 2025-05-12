@@ -3,11 +3,11 @@ GEM Tender Document Downloader - Modified MIT License
 
 Copyright (c) 2024 [Rishi Solanki]
 
-NOTICE: This software interacts with https://gem.gov.in/ and is subject to:
+NOTICE: This project interacts with https://gem.gov.in/ and is subject to:
 - GEM Terms of Use (https://gem.gov.in/terms-of-use)
 - GEM Privacy Policy (https://gem.gov.in/privacy-policy)
 
-By using this software, you agree to:
+By using this methodology, you agree to:
 1. Use downloaded documents ONLY as permitted by GEM's terms
 2. Not automate any actions that violate GEM's acceptable use policy
 3. Not redistribute GEM documents without proper authorization
