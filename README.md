@@ -2,7 +2,7 @@
 
 
 ## Problem Statement
-a company call 'abc ltd' is a service provider for tender information and they have clients from all over the india subscribe to thier serivices, on gem website we have tender informations
+a company call 'abc ltd' is a service provider for tender information and they have clients from all over the india subscribe to thier services, on gem website we have tender informations
 our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner information on abc ltd portal for xyz tender but cannot download the documents for that particual tender and clinet send each tender's reference id.
  - each tender has unique reference id
  - if we have winner bidder gem website must upload the whole document as a pdf
