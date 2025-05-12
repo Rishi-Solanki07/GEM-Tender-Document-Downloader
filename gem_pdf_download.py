@@ -31,14 +31,14 @@ import pypdfium2 as pdfium
 
 
 # OPTIONAL: Set path to tesseract.exe if not in system PATH
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"use_yourpath\Tesseract-OCR\tesseract.exe"
 
 
 # In[3]:
 
 
 # Set your download directory (where you want your information is get downloaded)
-download_dir = r"C:\Users\solan\python_things\gempdf"
+download_dir = r"choose_your_path\gempdf"
 
 
 # In[4]:
@@ -238,7 +238,7 @@ rdf.head(10)
 
 
 #Save rdf DataFrame to CSV/excel format if you want
-rdf.to_csv(r"C:\Users\solan\python_things\gempdf\info.csv", index=False)
+rdf.to_csv(r"choose_yourpath\gempdf\info.csv", index=False)
 
 
 # In[ ]:
