@@ -97,8 +97,14 @@ let me explain my code will give you chance to just paste your all reference ids
 ## Sample CSV Output Structure
 
 ```csv
-reference_id,pdf_name,pdf_path,status
-GEM/2024/B/5588836,contract_5588836.pdf,C:\Downloads\contract_5588836.pdf,success
-GEM/2025/B/6071338,no result found,N/A,failed
-GEM/2024/B/5594165,contract_5594165.pdf,C:\Downloads\contract_5594165.pdf,success
+reference_id	pdf_name	pdf_path
+0	GEM/2024/B/5588836	no result found	no result found
+1	GEM/2025/B/6071338	GEMC-511687710659558-12042025 (1).pdf	use_yourown_path\gempdf\GEMC-511687710659558-12042025 (1).pdf
+2	GEM/2024/B/5594165	GEMC-511687755678653-28112024 (1).pdf	use_yourown_path\gempdf\GEMC-511687755678653-28112024 (1).pdf
+3	GEM/2024/B/5458607	GEMC-511687797936727-19122024 (1).pdf	use_yourown_path\gempdf\GEMC-511687797936727-19122024 (1).pdf
+4	GEM/2024/B/5480361	GEMC-511687753705287-01012025 (1).pdf	use_yourown_path\gempdf\GEMC-511687753705287-01012025 (1).pdf
+5	GEM/2024/B/4560359	GEMC-511687772753116-22102024 (1).pdf	use_yourown_path\gempdf\GEMC-511687772753116-22102024 (1).pdf
+6	GEM/2018/B/119037	no result found	no result found
+7	GEM/2022/B/1919736	GEMC-511687766920434-25022022 (1).pdf	use_yourown_path\gempdf\GEMC-511687766920434-25022022 (1).pdf
+8	GEM/2024/B/5598504	GEMC-511687718974362-08012025 (1).pdf	use_yourown_path\gempdf\GEMC-511687718974362-08012025 (1).pdf
 
