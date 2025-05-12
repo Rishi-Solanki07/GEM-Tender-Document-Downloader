@@ -6,6 +6,8 @@ a company call 'abc ltd' is a service provider for tender information and they h
 our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner bidder information on abc ltd portal for xyz tenders but cannot download the documents for that particual tender and client send mutiple cases, so support team needs to deal with each tender's reference id.
  - each tender has unique reference id
  - if we have winner bidder name on gem, document must be upload as a pdf
+ - not applicable when reference id is wrong
+ - when officially gem site is not uploaded document this method won't work
 
 1. **customer Support employee must manually:**
    - Visit https://gem.gov.in/
