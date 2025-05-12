@@ -3,7 +3,7 @@
 
 ## Problem Statement
 a company call 'abc ltd' is a service provider for tender information and they have clients from all over the india subscribe to thier services, on gem website we have tender informations
-our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner bidder information on abc ltd portal for xyz tenders but cannot download the documents for that particual tender and client send mutiple cases, so support team need to deal with each tender's reference id.
+our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner bidder information on abc ltd portal for xyz tenders but cannot download the documents for that particual tender and client send mutiple cases, so support team needs to deal with each tender's reference id.
  - each tender has unique reference id
  - if we have winner bidder gem website must upload the whole document as a pdf
 
