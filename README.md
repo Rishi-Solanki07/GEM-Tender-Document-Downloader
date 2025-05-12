@@ -17,7 +17,7 @@ our Customer support teams handling Government e-Marketplace (GEM) portal querie
    - Verify successful downloads
    - Send documents to clients
 
-2. **This becomes time-consuming when handling clinet's on call:**
+2. **This becomes time-consuming when handling client's on call:**
    - 2-3 reference IDs (typical case)
    - 30-40 reference IDs (large cases)
    - Multiple clients simultaneously
@@ -29,7 +29,7 @@ our Customer support teams handling Government e-Marketplace (GEM) portal querie
 
 
 
-## to solves these issues  we can just  enable one-click downloading of all tender documents using reference IDs, and you will get your documnets downloaded on your choosen path.
+## to solves these issues  we can just  enable one-click downloading of all tender documents using reference IDs, and you will get your documents downloaded on your choosen path.
 ## yes! paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes, let me explain my code.
 
 ## How the Solution Works
