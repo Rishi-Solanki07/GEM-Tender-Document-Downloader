@@ -1,6 +1,41 @@
-MIT License
 
-Copyright (c) 2025 Rishi Solanki 
+GEM Tender Document Downloader - Modified MIT License
+
+Copyright (c) 2024 [Rishi Solanki]
+
+NOTICE: This software interacts with https://gem.gov.in/ and is subject to:
+- GEM Terms of Use (https://gem.gov.in/terms-of-use)
+- GEM Privacy Policy (https://gem.gov.in/privacy-policy)
+
+By using this software, you agree to:
+1. Use downloaded documents ONLY as permitted by GEM's terms
+2. Not automate any actions that violate GEM's acceptable use policy
+3. Not redistribute GEM documents without proper authorization
+
+
+# GEM Automation Compliance Statement
+
+This tool is designed to assist with legitimate use cases under:
+[GEM Terms of Use](https://gem.gov.in/terms-of-use)
+
+## Strict Prohibitions
+- ❌ No scraping of bulk tender data
+- ❌ No bypassing of CAPTCHA systems (only assisted solving)
+- ❌ No redistribution of downloaded documents
+- ❌ No high-frequency requests (max 5 requests/minute)
+
+## Required Actions
+- ✔️ Manually verify each downloaded document's usage rights
+- ✔️ Delete documents after fulfilling support requests
+- ✔️ Cache documents only for 24 hours if needed
+
+## Liability
+This tool is provided for INTERNAL SUPPORT USE ONLY. The maintainers are not responsible for violations of GEM's terms by end users.
+
+--- Original MIT License Terms Follow Below ---
+
+Permission is hereby granted...
+[Copyright (c) 2025 Rishi Solanki 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -18,4 +53,5 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+SOFTWARE.]
+
