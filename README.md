@@ -9,6 +9,8 @@ our Customer support teams handling Government e-Marketplace (GEM) portal querie
  - not applicable when reference id is wrong
  - when officially gem site is not uploaded document this method won't work
 
+# please check my presentation for more understanding [Click-here](click-here'https://drive.google.com/file/d/1f8yoK-Sas3PNsCIJRsyIhFy0Iqh2GM_T/view?usp=sharing)
+
 1. **customer Support employee must manually:**
    - Visit https://gem.gov.in/
    - Search for each tender using its unique reference ID
