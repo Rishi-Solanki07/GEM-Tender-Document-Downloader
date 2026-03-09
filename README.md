@@ -1,115 +1,94 @@
-# GEM-Tender-Document-Downloader
+## GEM-Tender-Document-Downloader
 
+**Problem Statement**
+ABC Ltd provides tender information services to clients across India. A recurring challenge arises when clients report that they can see tender winner bidder information on the ABC portal but cannot download the official GEM documents. Support teams then need to manually handle each tender’s reference ID, which is slow and error-prone.
 
-## Problem Statement
-a company call 'abc ltd' is a service provider for tender information and they have clients from all over the india subscribe to thier services, on gem website we have tender informations
-our Customer support teams handling Government e-Marketplace (GEM) portal queries face a significant challenge when clients report on call they can see tender winner bidder information on abc ltd portal for xyz tenders but cannot download the documents for that particual tender and client send mutiple cases, so support team needs to deal with each tender's reference id.
- - each tender has unique reference id
- - if we have winner bidder name on gem, document must be upload as a pdf
- - not applicable when reference id is wrong
- - when officially gem site is not uploaded document this method won't work
+- Each tender has a unique reference ID.  
+- If a winner bidder name exists on GEM, the document should be downloadable as a PDF.  
+- If the reference ID is invalid or GEM has not uploaded the document, this method cannot work.  
 
-# please check my presentation for more understanding 
-[Click-here](https://drive.google.com/file/d/1f8yoK-Sas3PNsCIJRsyIhFy0Iqh2GM_T/view?usp=sharing)
+[Presentation for more details](https://drive.google.com/file/d/1f8yoK-Sas3PNsCIJRsyIhFy0Iqh2GM_T/view?usp=sharing)
 
-1. **customer Support employee must manually:**
-   - Visit https://gem.gov.in/
-   - Search for each tender using its unique reference ID
-   - Solve captchas repeatedly for each tender
-   - Download documents one-by-one
-   - Verify successful downloads
-   - Send documents to clients
+---
 
-2. **This becomes time-consuming when handling client's on call:**
-   - 2-3 reference IDs (typical case)
-   - 30-40 reference IDs (large cases)
-   - Multiple clients simultaneously
+## Manual Process (Current Challenge)
+1. Visit [GEM](https://gem.gov.in/)  
+2. Search each tender by reference ID  
+3. Solve captchas repeatedly  
+4. Download PDFs one by one  
+5. Verify and send to clients  
 
-3. **Additional complications:**
-   - Not all customer support employee have direct database access
-   - Senior agents get overloaded with more work
-   - Clients remain on hold during manual verification
+This is manageable for 2–3 IDs but becomes overwhelming for 30–40 IDs or multiple clients at once.
 
+---
 
+## Automated Solution
+The script enables **one-click downloading of all tender documents** using reference IDs.  
+- Paste all reference IDs into a `.txt` file (comma-separated).  
+- Run the code.  
+- All tender documents are downloaded automatically to your chosen folder.  
 
-## to solves these issues  we can just  enable one-click downloading of all tender documents using reference IDs, and you will get your documents downloaded on your choosen path.
-## yes! paste your all reference ids given by client and run the code and you will get your all tender's documents in minutes, let me explain my code.
+👉 Use [https://delim.co/](https://delim.co/) to quickly convert reference IDs into a comma-separated format.
+
+---
 
 ## How the Solution Works
 
-### Step 1: Initialization and Setup
-**Libraries Used:**
-- `selenium` (webdriver, By, Options, WebDriverWait, EC)
-- `pytesseract` (OCR for captcha solving)
-- `PIL` (Image processing)
-- `pandas` (Data organization)
-- `os`, `time`, `glob` (File operations)
-
-**Process:**
-1. Configure Chrome browser options for PDF downloading
-2. Set download directory path
-3. Initialize WebDriver with custom preferences
-4. Define reference IDs to process
+### Step 1: Initialization
+- Libraries: `selenium`, `pytesseract`, `PIL`, `pandas`, `os`, `time`, `glob`  
+- Configure Chrome for PDF auto-download  
+- Set download directory  
+- Read reference IDs from `ref.txt`  
 
 ### Step 2: Browser Automation
-**Process:**
-1. Opens Chrome browser in headless mode
-2. Navigates to GEM contract page: `https://gem.gov.in/view_contracts/bid_detail?bid_no=REFERENCE_ID`
-3. Checks for valid tender results ("No Result Found" handling)
-4. Clicks contract number element to trigger captcha
+- Open GEM contract page for each reference ID  
+- Handle “No Result Found” cases  
+- Trigger captcha challenge  
 
 ### Step 3: Captcha Handling
-**Libraries Used:**
-- `pytesseract` (OCR)
-- `base64` (Image decoding)
-- `PIL.Image` (Image processing)
+- Extract captcha image (base64)  
+- Solve using Tesseract OCR  
+- Retry up to 8 times if incorrect  
 
-**Process:**
-1. Locates captcha image element
-2. Extracts base64 encoded image data
-3. Converts to PIL Image object
-4. Uses Tesseract OCR to extract text
-5. Enters solved captcha in input field
-6. Handles refresh if captcha fails (up to 8 attempts)
+### Step 4: PDF Download
+- Click download button after captcha success  
+- Monitor folder until download completes  
+- Record metadata: reference ID, filename, path, status  
 
-### Step 4: PDF Download and Management
-**Process:**
-1. After successful captcha submission:
-   - Waits for download button to appear
-   - Clicks download button
-   - Monitors download directory for completion
-2. Tracks downloaded files with metadata:
-   - Reference ID
-   - PDF filename
-   - Download timestamp
-   - File path
-3. Handles failed downloads with appropriate status
+### Step 5: Reporting
+- Compile results into Excel with three columns:  
+  - `reference_id`  
+  - `pdf_name`  
+  - `pdf_link` (clickable hyperlink)  
+- Apply formatting:  
+  - Column widths: 22 / 38.5 / 18  
+  - Header row frozen, bold size 14  
+  - Borders applied, hyperlinks styled blue and bold  
 
-### Step 5: Reporting and Output
-**Libraries Used:**
-- `pandas` (DataFrame creation)
-- `glob` (File searching)
+---
 
-**Process:**
-1. Compiles all download attempts into a DataFrame
-2. Generates CSV report with columns:
-   - reference_id
-   - pdf_name
-   - pdf_path
-   - status (success/failed)
-3. Saves report as `download_results.csv`
+## Sample Excel Output
+| reference_id       | pdf_name                                | pdf_link   |
+|--------------------|------------------------------------------|------------|
+| GEM/2024/B/5588836 | no result found                         | no result found |
+| GEM/2025/B/6071338 | no result found                         | no result found |
+| GEM/2024/B/5594165 | GEMC-511687755678653-28112024.pdf        | Click Here |
+| GEM/2024/B/5458607 | GEMC-511687797936727-19122024.pdf        | Click Here |
 
-## Sample CSV Output Structure
+---
 
-```csv
-reference_id	pdf_name	pdf_path
-0	GEM/2024/B/5588836	no result found	no result found
-1	GEM/2025/B/6071338	GEMC-511687710659558-12042025 (1).pdf	use_yourown_path\gempdf\GEMC-511687710659558-12042025 (1).pdf
-2	GEM/2024/B/5594165	GEMC-511687755678653-28112024 (1).pdf	use_yourown_path\gempdf\GEMC-511687755678653-28112024 (1).pdf
-3	GEM/2024/B/5458607	GEMC-511687797936727-19122024 (1).pdf	use_yourown_path\gempdf\GEMC-511687797936727-19122024 (1).pdf
-4	GEM/2024/B/5480361	GEMC-511687753705287-01012025 (1).pdf	use_yourown_path\gempdf\GEMC-511687753705287-01012025 (1).pdf
-5	GEM/2024/B/4560359	GEMC-511687772753116-22102024 (1).pdf	use_yourown_path\gempdf\GEMC-511687772753116-22102024 (1).pdf
-6	GEM/2018/B/119037	no result found	no result found
-7	GEM/2022/B/1919736	GEMC-511687766920434-25022022 (1).pdf	use_yourown_path\gempdf\GEMC-511687766920434-25022022 (1).pdf
-8	GEM/2024/B/5598504	GEMC-511687718974362-08012025 (1).pdf	use_yourown_path\gempdf\GEMC-511687718974362-08012025 (1).pdf
+## Limitations
+- **Captcha solving**: OCR may misread text; retries increase processing time.  
+- **Winner bidder availability**: If GEM has not uploaded the document, it cannot be downloaded.  
+- **Reference ID validity**: Incorrect IDs will always fail.  
+- **Default PDF viewer**: Hyperlinks open PDFs in your system’s default app. To use Microsoft Edge, set Edge as the default PDF viewer in Windows settings.  
 
+---
+
+This updated README now reflects:
+- Reading reference IDs from a `.txt` file.  
+- Using [delim.co](https://delim.co/) for quick formatting.  
+- Excel output with hyperlinks and styling.  
+- Clear limitations for users.  
+
+Would you like me to also add a **“Quick Start” section** with exact steps (like “Step 1: Save IDs in ref.txt, Step 2: Run script, Step 3: Open Excel report”), so new users can follow without reading the whole document?
