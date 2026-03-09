@@ -7,15 +7,13 @@ ABC Ltd provides tender information services to clients across India. A recurrin
 - If a winner bidder name exists on GEM, the document should be downloadable as a PDF.  
 - If the reference ID is invalid or GEM has not uploaded the document, this method cannot work.
 
+[Presentation for more details](https://drive.google.com/file/d/1f8yoK-Sas3PNsCIJRsyIhFy0Iqh2GM_T/view?usp=sharing)
+
 ## Limitations
 - **Captcha solving**: OCR may misread text; retries increase processing time.  
 - **Winner bidder availability**: If GEM has not uploaded the document, it cannot be downloaded.  
 - **Reference ID validity**: Incorrect IDs will always fail.  
 - **Default PDF viewer**: Hyperlinks open PDFs in your system’s default app. To use Microsoft Edge, set Edge as the default PDF viewer in Windows settings.
-
-
-[Presentation for more details](https://drive.google.com/file/d/1f8yoK-Sas3PNsCIJRsyIhFy0Iqh2GM_T/view?usp=sharing)
-
 ---
 
 ## Manual Process (Current Challenge)
